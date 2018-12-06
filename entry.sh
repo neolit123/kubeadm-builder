@@ -87,3 +87,8 @@ cp $OUT/kubeadm /go/bin
 make WHAT=cmd/kubelet
 cp $OUT/kubelet /go/bin
 /go/bin/kubelet --version
+
+# build kubectl
+make WHAT=cmd/kubectl
+cp $OUT/kubectl /go/bin
+/go/bin/kubectl version --short=true 2> /dev/null
